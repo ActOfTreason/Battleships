@@ -22,7 +22,9 @@ public class Tiles : MonoBehaviour {
         tilemap.CompressBounds();
 		BoundsInt bounds = tilemap.cellBounds;
 		TileBase[] allTiles = tilemap.GetTilesBlock(bounds);
-        Debug.Log("this " + allTiles);
+
+        //debug test ekki gera gameboardid svona
+        gameBoard = tilemap.GetTilesBlock(bounds);
 
 		for (int x = 0; x < bounds.size.x; x++) {
 			for (int y = 0; y < bounds.size.y; y++) {
@@ -41,16 +43,16 @@ public class Tiles : MonoBehaviour {
 	{
 
 		if (Input.GetMouseButtonDown (0)) {
-			Vector3 pos = Camera.main.ScreenToWorldPoint (Input.mousePosition);
-			Debug.Log ("x: " + pos.x + "y; " + pos.y);
-            //Vector3Int posis = new Vector3Int((int)Math.Floor(pos.x), (int)(Math.Floor(pos.y) - 0.5), 1);
-            Vector3Int posis = new Vector3Int((int)pos.x, (int)(Math.Floor(pos.y) - 0.5), 1);
-            Debug.Log(posis);
-            TileBase CLickedTile = tilemap.GetTile(posis);
-            Debug.Log("the tile " + CLickedTile);
-            TileBase spawnTile = ships.GetTile(posis);
-            Instantiate(debugShip, posis, Quaternion.identity);
-		}
+            Vector3 worldPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            Vector3Int cell = ships.WorldToCell(worldPos);
+            Debug.Log(cell);
+            Vector3 cellPos = ships.GetCellCenterWorld(cell) + new Vector3(0f, 0.5f, 1.5f);
+            TileBase selectedTile = gameBoard[(cell.x + 5) + (5 + cell.y) * tilemap.cellBounds.size.x];
+            Debug.Log(selectedTile.name);
+            
+
+            //Instantiate(debugShip, cellPos, Quaternion.identity);
+        }
 
 
 
