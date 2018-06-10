@@ -4,14 +4,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 
-public class Tiles : MonoBehaviour {
+public class Tiles : BoardController {
 
 
     Tilemap tilemap;
     Tilemap ships;
     Transform test;
     public GameObject debugShip;
-    TileBase[] gameBoard;
+    //TileBase[,] gameBoard = new TileBase[10,10];
     // Use this for initialization
     void Start()
 	{
@@ -21,14 +21,16 @@ public class Tiles : MonoBehaviour {
         ships = test.GetComponent<Tilemap> ();
         tilemap.CompressBounds();
 		BoundsInt bounds = tilemap.cellBounds;
+        //gameBoard = new TileBase[bounds.size.x, bounds.size.y];
 		TileBase[] allTiles = tilemap.GetTilesBlock(bounds);
 
         //debug test ekki gera gameboardid svona
-        gameBoard = tilemap.GetTilesBlock(bounds);
+        //gameBoard = tilemap.GetTilesBlock(bounds);
 
 		for (int x = 0; x < bounds.size.x; x++) {
 			for (int y = 0; y < bounds.size.y; y++) {
 				TileBase tile = allTiles [x + y * bounds.size.x];
+                gameBoard[x , y] = tile;
 				if (tile != null) {
 					//Debug.Log("x:" + x + " y:" + y + " tile:" + tile.name);
 				} else {
@@ -47,11 +49,12 @@ public class Tiles : MonoBehaviour {
             Vector3Int cell = ships.WorldToCell(worldPos);
             Debug.Log(cell);
             Vector3 cellPos = ships.GetCellCenterWorld(cell) + new Vector3(0f, 0.5f, 1.5f);
-            TileBase selectedTile = gameBoard[(cell.x + 5) + (5 + cell.y) * tilemap.cellBounds.size.x];
+            //TileBase selectedTile = gameBoard[(cell.x + 5) + (5 + cell.y) * tilemap.cellBounds.size.x];
+            TileBase selectedTile = gameBoard[cell.x +5 , cell.y + 5];
             Debug.Log(selectedTile.name);
             
-
-            //Instantiate(debugShip, cellPos, Quaternion.identity);
+            
+            Instantiate(debugShip, cellPos, Quaternion.identity);
         }
 
 

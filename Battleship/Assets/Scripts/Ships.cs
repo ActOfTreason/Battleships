@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GameBoard : MonoBehaviour {
+public class Ships : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
