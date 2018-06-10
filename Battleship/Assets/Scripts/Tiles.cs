@@ -69,13 +69,23 @@ public class Tiles : BoardController {
 
             if (hit)
             {
-                PlaceCubeNear(hit.point);
+                PlaceShip(hit.point);
+            }
+        }
+
+        if (Input.GetMouseButtonDown(1))
+        {
+            RaycastHit2D hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero);
+
+            if (hit)
+            {
+                DeleteShip(hit.point);
             }
         }
 
     }
 
-    private void PlaceCubeNear(Vector3 clickPoint)
+    private void PlaceShip(Vector3 clickPoint)
     {
         Vector3 finalPosition = gridSnappingTool.GetNearestPointOnGrid(clickPoint);
         finalPosition.z = 1;
@@ -86,7 +96,7 @@ public class Tiles : BoardController {
         if(!gameBoard[xTest,yTest])
         {
             //GameObject.CreatePrimitive(PrimitiveType.Cube).transform.position = finalPosition;
-            Instantiate(debugShip, finalPosition, Quaternion.identity);
+            shipsOnBoard[xTest, yTest] = Instantiate(debugShip, finalPosition, Quaternion.identity) as GameObject;
             ChangeOccupiedTile(xTest, yTest);
         } else
         {
@@ -96,5 +106,29 @@ public class Tiles : BoardController {
 
 
        
+    }
+
+    private void DeleteShip(Vector3 clickPoint)
+    {
+        Vector3 finalPosition = gridSnappingTool.GetNearestPointOnGrid(clickPoint);
+        finalPosition.z = 1;
+        int xTest = (int)(Math.Floor(finalPosition.x)) + 5;
+        int yTest = (int)(Math.Floor(finalPosition.y)) + 5;
+        Debug.Log("hnitin eru x: " + xTest + " y: " + yTest);
+
+        if (gameBoard[xTest, yTest])
+        {
+            //GameObject.CreatePrimitive(PrimitiveType.Cube).transform.position = finalPosition;
+            DestroyShipOnTile(xTest, yTest);
+            ChangeOccupiedTile(xTest, yTest);
+        }
+        else
+        {
+            Debug.Log("Aah Aah Aah nononon");
+        }
+
+
+
+
     }
 }
