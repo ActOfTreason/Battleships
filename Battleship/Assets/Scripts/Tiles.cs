@@ -51,7 +51,7 @@ public class Tiles : MonoBehaviour {
             Debug.Log(selectedTile.name);
             
 
-            //Instantiate(debugShip, cellPos, Quaternion.identity);
+            Instantiate(debugShip, cellPos, Quaternion.identity);
         }
 
 
