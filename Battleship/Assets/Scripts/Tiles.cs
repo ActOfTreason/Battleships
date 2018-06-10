@@ -67,6 +67,7 @@ public class Tiles : BoardController {
         {
             RaycastHit2D hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition) , Vector2.zero);
 
+
             if (hit)
             {
                 PlaceShip(hit.point);
