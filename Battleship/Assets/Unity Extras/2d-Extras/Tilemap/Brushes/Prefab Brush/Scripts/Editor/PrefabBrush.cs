@@ -16,7 +16,7 @@ namespace UnityEditor
 
 		public override void Paint(GridLayout grid, GameObject brushTarget, Vector3Int position)
 		{
-            Debug.Log(brushTarget.layer);
+            Debug.Log(m_Z);
 			// Do not allow editing palettes
 			if (brushTarget.layer == 31)
 				return;
