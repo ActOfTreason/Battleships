@@ -23,4 +23,17 @@ public class BoardController : MonoBehaviour {
     }
 
 
+    /// <summary>
+    /// Gets the location and the ship that is being placed
+    /// and uses that to update the gameboard
+    /// </summary>
+    /// <param name="x"> int, the cell clicked </param>
+    /// <param name="y"></param>
+    /// <param name="ship"></param>
+    protected void PlaceShip(int x, int y, GameObject ship)
+    {
+
+    }
+
+
 }

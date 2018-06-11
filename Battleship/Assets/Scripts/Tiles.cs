@@ -63,7 +63,7 @@ public class Tiles : BoardController {
             Instantiate(debugShip, cellPos, Quaternion.identity);
         }*/
 
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetKeyDown(KeyCode.U))
         {
             RaycastHit2D hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition) , Vector2.zero);
 
@@ -96,7 +96,10 @@ public class Tiles : BoardController {
         if(!gameBoard[xTest,yTest])
         {
             //GameObject.CreatePrimitive(PrimitiveType.Cube).transform.position = finalPosition;
-            shipsOnBoard[xTest, yTest] = Instantiate(debugShip, finalPosition, Quaternion.identity) as GameObject;
+
+            shipsOnBoard[xTest, yTest] = Instantiate(debugShip, finalPosition, Quaternion.identity);
+            //Ships newShip = Instantiate(debugShip);
+            PlaceShip(xTest, yTest, shipsOnBoard[xTest, yTest]);
             ChangeOccupiedTile(xTest, yTest);
         } else
         {
