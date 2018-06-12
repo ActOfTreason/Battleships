@@ -15,8 +15,9 @@ public class Ships : MonoBehaviour {
     // Use this for initialization
     void Start() {
         arrayOfArrays[0] = shipType.sizeY0;
-        arrayOfArrays[0] = shipType.sizeY1;
-        arrayOfArrays[0] = shipType.sizeY2;
+        arrayOfArrays[1] = shipType.sizeY1;
+        arrayOfArrays[2] = shipType.sizeY2;
+        Debug.Log(arrayOfArrays);
         InitSize(arrayOfArrays);
 	}
 

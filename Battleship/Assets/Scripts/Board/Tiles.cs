@@ -65,7 +65,7 @@ public class Tiles : BoardController {
 
         if (Input.GetKeyDown(KeyCode.U))
         {
-            RaycastHit2D hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition) , Vector2.zero);
+            RaycastHit2D hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero);
 
             if (hit)
             {
