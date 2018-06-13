@@ -11,10 +11,10 @@ public class Tiles : BoardController {
     Tilemap ships;
     Transform test;
     public GameObject debugShip;
-    private GridSnappingTool gridSnappingTool;
+    public GridSnappingTool gridSnappingTool;
 
     void Awake() {
-        gridSnappingTool = FindObjectOfType<GridSnappingTool>();
+        //gridSnappingTool = FindObjectOfType<GridSnappingTool>();
     }
 
 

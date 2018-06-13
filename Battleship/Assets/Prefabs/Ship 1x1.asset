@@ -11,9 +11,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09753ae20c10f704fb0b53c19a80654a, type: 3}
   m_Name: Ship 1x1
   m_EditorClassIdentifier: 
-  sizeY0: 
-  sizeY1: 
-  sizeY2: 
+  sizeY0: 010000
+  sizeY1: 000000
+  sizeY2: 000000
   ability: 
   spaces: 0
   remainingSpaces: 0
