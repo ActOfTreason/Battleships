@@ -20,9 +20,9 @@ GameObject:
   m_Component:
   - component: {fileID: 4188798942047658}
   - component: {fileID: 212841623126488920}
-  - component: {fileID: 114072391926162740}
   - component: {fileID: 61856869971389022}
-  - component: {fileID: 114970369826580536}
+  - component: {fileID: 114681993010685282}
+  - component: {fileID: 114165452717001364}
   m_Layer: 0
   m_Name: 1x1_ship 1
   m_TagString: Untagged
@@ -68,7 +68,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &114072391926162740
+--- !u!114 &114165452717001364
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -76,11 +76,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1811862674421888}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 68076efd49ab50b47a733b1bc6d100ce, type: 3}
+  m_Script: {fileID: 11500000, guid: 7ca7fa14d34e83841b9ff9a77c8f58aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shipType: {fileID: 11400000, guid: d915fb3da74f8c642b5d95b3d4d9f7ac, type: 2}
---- !u!114 &114970369826580536
+  shipType: {fileID: 0}
+--- !u!114 &114681993010685282
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -88,11 +88,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1811862674421888}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2a8232dd57a8f5542b26a7dbcd30f297, type: 3}
+  m_Script: {fileID: 11500000, guid: c6379e8fbdd6c7048a3de141f2f69453, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gridSnappingTool: {fileID: 114284761425414402, guid: b73c5f7b7c7a6874c9d2fbe13c07892e,
-    type: 2}
+  gridSnappingTool: {fileID: 0}
   grid: {fileID: 0}
 --- !u!212 &212841623126488920
 SpriteRenderer:

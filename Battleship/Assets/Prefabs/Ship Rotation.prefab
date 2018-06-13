@@ -37,7 +37,7 @@ GameObject:
   - component: {fileID: 4324870854798412}
   - component: {fileID: 114224406894147344}
   m_Layer: 0
-  m_Name: Ship 1
+  m_Name: Ship Rotation
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
