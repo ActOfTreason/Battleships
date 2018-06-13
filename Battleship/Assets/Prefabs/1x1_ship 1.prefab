@@ -79,7 +79,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ca7fa14d34e83841b9ff9a77c8f58aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shipType: {fileID: 0}
+  shipType: {fileID: 11400000, guid: 3544daeb0f8eb744b9a02b33ef9fdd65, type: 2}
 --- !u!114 &114681993010685282
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -91,7 +91,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6379e8fbdd6c7048a3de141f2f69453, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gridSnappingTool: {fileID: 0}
+  gridSnappingTool: {fileID: 114948868147105544, guid: 928d363fe0870f745819935c4bb81cfa,
+    type: 2}
   grid: {fileID: 0}
 --- !u!212 &212841623126488920
 SpriteRenderer:

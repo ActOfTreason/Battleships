@@ -113,47 +113,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &199766638
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 866941548}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 199766640}
-  - component: {fileID: 199766639}
-  m_Layer: 0
-  m_Name: Grid Snapping Tool
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &199766639
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 199766638}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3413fd55956e7c84fb42a0a83f227ced, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  size: 1
---- !u!4 &199766640
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 866941548}
-  m_GameObject: {fileID: 199766638}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.5, y: -4.5, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -1294,56 +1253,40 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 4613585127668952, guid: b73c5f7b7c7a6874c9d2fbe13c07892e, type: 2}
+    - target: {fileID: 4883345227354182, guid: 928d363fe0870f745819935c4bb81cfa, type: 2}
       propertyPath: m_LocalPosition.x
       value: -4.5
       objectReference: {fileID: 0}
-    - target: {fileID: 4613585127668952, guid: b73c5f7b7c7a6874c9d2fbe13c07892e, type: 2}
+    - target: {fileID: 4883345227354182, guid: 928d363fe0870f745819935c4bb81cfa, type: 2}
       propertyPath: m_LocalPosition.y
       value: -4.5
       objectReference: {fileID: 0}
-    - target: {fileID: 4613585127668952, guid: b73c5f7b7c7a6874c9d2fbe13c07892e, type: 2}
+    - target: {fileID: 4883345227354182, guid: 928d363fe0870f745819935c4bb81cfa, type: 2}
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4613585127668952, guid: b73c5f7b7c7a6874c9d2fbe13c07892e, type: 2}
+    - target: {fileID: 4883345227354182, guid: 928d363fe0870f745819935c4bb81cfa, type: 2}
       propertyPath: m_LocalRotation.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4613585127668952, guid: b73c5f7b7c7a6874c9d2fbe13c07892e, type: 2}
+    - target: {fileID: 4883345227354182, guid: 928d363fe0870f745819935c4bb81cfa, type: 2}
       propertyPath: m_LocalRotation.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4613585127668952, guid: b73c5f7b7c7a6874c9d2fbe13c07892e, type: 2}
+    - target: {fileID: 4883345227354182, guid: 928d363fe0870f745819935c4bb81cfa, type: 2}
       propertyPath: m_LocalRotation.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4613585127668952, guid: b73c5f7b7c7a6874c9d2fbe13c07892e, type: 2}
+    - target: {fileID: 4883345227354182, guid: 928d363fe0870f745819935c4bb81cfa, type: 2}
       propertyPath: m_LocalRotation.w
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 4613585127668952, guid: b73c5f7b7c7a6874c9d2fbe13c07892e, type: 2}
+    - target: {fileID: 4883345227354182, guid: 928d363fe0870f745819935c4bb81cfa, type: 2}
       propertyPath: m_RootOrder
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1395717120538350, guid: b73c5f7b7c7a6874c9d2fbe13c07892e, type: 2}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 0}
-      propertyPath: m_LocalPosition.x
-      value: -4.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 0}
-      propertyPath: m_LocalPosition.y
-      value: -4.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 0}
-      propertyPath: m_Name
-      value: Grid Snapping Tool
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: b73c5f7b7c7a6874c9d2fbe13c07892e, type: 2}
+  m_ParentPrefab: {fileID: 100100000, guid: 928d363fe0870f745819935c4bb81cfa, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &966598865
 GameObject:
