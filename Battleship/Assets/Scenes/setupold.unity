@@ -1287,9 +1287,10 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1464439567537972, guid: 928d363fe0870f745819935c4bb81cfa, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 0}
   m_ParentPrefab: {fileID: 100100000, guid: 928d363fe0870f745819935c4bb81cfa, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &966598865
@@ -1328,7 +1329,7 @@ BoxCollider2D:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 966598865}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
@@ -1347,6 +1348,23 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 10, y: 10}
   m_EdgeRadius: 0
+--- !u!1 &1342427320 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1464439567537972, guid: 928d363fe0870f745819935c4bb81cfa,
+    type: 2}
+  m_PrefabInternal: {fileID: 866941548}
+--- !u!114 &1342427321
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1342427320}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3413fd55956e7c84fb42a0a83f227ced, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  size: 1
 --- !u!1 &1752696212
 GameObject:
   m_ObjectHideFlags: 0
@@ -1542,7 +1560,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   debugShip: {fileID: 1811862674421888, guid: 7625afad731ee8f4da685b7b88cd97ff, type: 2}
-  gridSnappingTool: {fileID: 114961020993843302, guid: 928d363fe0870f745819935c4bb81cfa,
+  gridSnappingTool: {fileID: 114956257402392332, guid: 928d363fe0870f745819935c4bb81cfa,
     type: 2}
 --- !u!1 &2079279993
 GameObject:

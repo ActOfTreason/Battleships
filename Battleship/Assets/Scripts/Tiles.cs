@@ -10,8 +10,25 @@ public class Tiles : BoardController {
     Tilemap tilemap;
     Tilemap ships;
     Transform test;
-    public GameObject debugShip;
+    public Ships debugShip;
     public GridSnappingTool gridSnappingTool;
+
+    private Ships selectedShip;
+
+    public Ships SelectedShip
+    {
+        get
+        {
+            return selectedShip;
+        }
+
+        set
+        {
+            selectedShip = value;
+        }
+    }
+
+    private int indexDebug = 1;
 
     void Awake() {
         //gridSnappingTool = FindObjectOfType<GridSnappingTool>();
@@ -63,7 +80,19 @@ public class Tiles : BoardController {
             Instantiate(debugShip, cellPos, Quaternion.identity);
         }*/
 
-        if (Input.GetKeyDown(KeyCode.U))
+        if (Input.GetMouseButtonDown(0))
+        {
+            RaycastHit2D hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero);
+
+            if (hit)
+            {
+                selectedShip = hit.collider.gameObject.GetComponent<Ships> ();
+                Debug.Log(selectedShip.name);
+                
+            }
+        }
+
+            if (Input.GetKeyDown(KeyCode.U))
         {
             RaycastHit2D hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero);
 
@@ -89,18 +118,19 @@ public class Tiles : BoardController {
     {
         Vector3 finalPosition = gridSnappingTool.GetNearestPointOnGrid(clickPoint);
         finalPosition.z = 1;
-        int xTest = (int) (Math.Floor(finalPosition.x)) + 5;
-        int yTest = (int)(Math.Floor(finalPosition.y)) + 5;
-        Debug.Log("hnitin eru x: " + xTest + " y: " + yTest);
+        int xIndexInArray = (int) (Math.Floor(finalPosition.x)) + 5;
+        int yIndexInArray = (int)(Math.Floor(finalPosition.y)) + 5;
+        //Debug.Log("hnitin eru x: " + xIndexInArray + " y: " + yIndexInArray);
 
-        if(!gameBoard[xTest,yTest])
+        if(!gameBoard[xIndexInArray,yIndexInArray])
         {
             //GameObject.CreatePrimitive(PrimitiveType.Cube).transform.position = finalPosition;
 
-            shipsOnBoard[xTest, yTest] = Instantiate(debugShip, finalPosition, Quaternion.identity);
-            //Ships newShip = Instantiate(debugShip);
-            PlaceShip(xTest, yTest, shipsOnBoard[xTest, yTest]);
-            ChangeOccupiedTile(xTest, yTest);
+            shipsOnBoard[xIndexInArray, yIndexInArray] = Instantiate(debugShip, finalPosition, Quaternion.identity);
+            PlaceShip(xIndexInArray, yIndexInArray, shipsOnBoard[xIndexInArray, yIndexInArray]);
+            shipsOnBoard[xIndexInArray, yIndexInArray].name = "this is ship number " + indexDebug;
+            indexDebug++;
+            ChangeOccupiedTile(xIndexInArray, yIndexInArray);
         } else
         {
             Debug.Log("Aah Aah Aah nononon");
@@ -130,8 +160,7 @@ public class Tiles : BoardController {
             Debug.Log("Aah Aah Aah nononon");
         }
 
-
-
-
     }
+
+
 }

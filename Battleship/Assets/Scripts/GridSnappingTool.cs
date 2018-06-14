@@ -44,7 +44,7 @@ public class GridSnappingTool : MonoBehaviour {
         return result;
     }
 
-    /*private void OnDrawGizmos()
+    private void OnDrawGizmos()
     {
         Gizmos.color = Color.yellow;
         for (float x = transform.position.x; x < transform.position.x + 10; x += size)
@@ -56,5 +56,5 @@ public class GridSnappingTool : MonoBehaviour {
             }
 
         }
-    }*/
+    }
 }

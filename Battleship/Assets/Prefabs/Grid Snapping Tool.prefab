@@ -19,7 +19,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4811214819601232}
-  - component: {fileID: 114961020993843302}
+  - component: {fileID: 114956257402392332}
   m_Layer: 0
   m_Name: Grid Snapping Tool
   m_TagString: Untagged
@@ -40,7 +40,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &114961020993843302
+--- !u!114 &114956257402392332
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -48,7 +48,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1464439567537972}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: edd57268927dc504280298b3f7a7f755, type: 3}
+  m_Script: {fileID: 11500000, guid: 3413fd55956e7c84fb42a0a83f227ced, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   size: 1

@@ -7,7 +7,7 @@ public class BoardController : MonoBehaviour {
 
     //protected TileBase[,] gameBoard = new TileBase[10,10];
     protected bool[,] gameBoard = new bool[10, 10];
-    protected GameObject[,] shipsOnBoard = new GameObject[10, 10];
+    protected Ships[,] shipsOnBoard = new Ships[10, 10];
 
 
 
@@ -30,7 +30,7 @@ public class BoardController : MonoBehaviour {
     /// <param name="x"> int, the cell clicked </param>
     /// <param name="y"></param>
     /// <param name="ship"></param>
-    protected void PlaceShip(int x, int y, GameObject ship)
+    protected void PlaceShip(int x, int y, Ships ship)
     {
 
     }
