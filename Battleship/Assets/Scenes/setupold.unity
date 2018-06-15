@@ -1559,7 +1559,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6de267abfc93a20448778ddb0fb5ab58, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  debugShip: {fileID: 1811862674421888, guid: 7625afad731ee8f4da685b7b88cd97ff, type: 2}
+  debbuger: {fileID: 114833099952268484, guid: 07ea0a6754516f34b8988248663407ba, type: 2}
+  debugShip: {fileID: 114075327616585994, guid: 7625afad731ee8f4da685b7b88cd97ff,
+    type: 2}
   gridSnappingTool: {fileID: 114956257402392332, guid: 928d363fe0870f745819935c4bb81cfa,
     type: 2}
 --- !u!1 &2079279993

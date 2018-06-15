@@ -9,17 +9,30 @@ public class BoardController : MonoBehaviour {
     protected bool[,] gameBoard = new bool[10, 10];
     protected Ships[,] shipsOnBoard = new Ships[10, 10];
 
+    public Debugger debbuger;
+
 
 
     protected void ChangeOccupiedTile(int x, int y)
     {
         gameBoard[x, y] = !gameBoard[x, y];
+        PrintArray();
     }
 
     protected void DestroyShipOnTile(int x, int y)
     {
         Destroy(shipsOnBoard[x,y]);
         //shipsOnBoard.RemoveAt(x, y);
+    }
+
+
+
+    /// <summary>
+    /// calls a function in the debbuger that prints a 2d boolean array
+    /// </summary>
+    public void PrintArray()
+    {
+        debbuger.print2DBoolArray(gameBoard);
     }
 
 

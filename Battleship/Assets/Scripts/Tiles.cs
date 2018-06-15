@@ -87,7 +87,7 @@ public class Tiles : BoardController {
             if (hit)
             {
                 selectedShip = hit.collider.gameObject.GetComponent<Ships> ();
-                Debug.Log(selectedShip.name);
+                //Debug.Log(selectedShip.name);
                 
             }
         }

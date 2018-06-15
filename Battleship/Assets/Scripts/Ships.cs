@@ -50,7 +50,7 @@ public class Ships : MonoBehaviour {
 
         location.x += 4.5f;
         location.y += 4.5f;
-        Debug.Log("getshipLocation gefur " + location);
+        //Debug.Log("getshipLocation gefur " + location);
 
         return location;
 
@@ -58,10 +58,6 @@ public class Ships : MonoBehaviour {
     }
 
     void OnMouseDown() {
-
-        Debug.Log("'ytt a takka");
-
-        
 
         GetShipLocation();
         //Debug.Log(shipType.ability);
