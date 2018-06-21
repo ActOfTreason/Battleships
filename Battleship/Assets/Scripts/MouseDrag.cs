@@ -16,9 +16,9 @@ public class MouseDrag : MonoBehaviour {
 
         Vector3 mousePosistion = new Vector3(Input.mousePosition.x, Input.mousePosition.y, z);
         Vector3 objPosistion = Camera.main.ScreenToWorldPoint(mousePosistion);
-        Debug.Log("pos " + objPosistion);
-        Vector3 snappedPosistion = gridSnappingTool.GetNearestPointOnGridDragged(objPosistion);
-         Debug.Log("Snapped " + snappedPosistion);
+        //Debug.Log("pos " + objPosistion);
+        Vector3 snappedPosistion = gridSnappingTool.GetNearestPointOnGrid(objPosistion);
+         //Debug.Log("Snapped " + snappedPosistion);
 
         transform.position = gridSnappingTool.GetNearestPointOnGrid(objPosistion);
     }
